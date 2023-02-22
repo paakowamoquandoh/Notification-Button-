@@ -1,0 +1,25 @@
+.sudoku-container {
+  margin: 20px;
+  font: 14px sans-serif;
+  text-align: center;
+}
+.sudoku-container .sudoku-table {
+  margin: auto;
+  border-collapse: collapse;
+  border-left: solid;
+  border-top: solid;
+}
+.sudoku-container .sudoku-table__row:nth-of-type(3n) {
+  border-bottom: solid;
+}
+.sudoku-container .sudoku-table__cell {
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+.sudoku-container .sudoku-table__cell:nth-of-type(3n) {
+  border-right: solid;
+}
+.sudoku-container .sudoku-table__cell--wrong {
+  background-color: #f00;
+}
