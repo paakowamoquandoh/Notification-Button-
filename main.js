@@ -12,10 +12,11 @@ sendNotification.addEventListener("click", function(){
     if (permission === "granted") {
       const myFirstNotif = new Notification("Example Notification", {
         body: "hey dude",
-        data: {Asher: "Perfection"}
+        data: {Asher: "Perfection"},
+        icon: "me.png"
       })
       myFirstNotif.addEventListener("close", e =>{
-        alert("well done!!!!!!!")
+        // alert("well done!!!!!!!")
       })
     }
   })
