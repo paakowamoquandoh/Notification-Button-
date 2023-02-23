@@ -23,6 +23,10 @@ sendNotification.addEventListener("click", function(){
   })
 })
 
+
+
+
+//leaving page notification
 let secondNotif;
 let howlongGone;
 document.addEventListener("visibilitychange", function(){
@@ -37,5 +41,5 @@ document.addEventListener("visibilitychange", function(){
   } else {
     if(howlongGone) clearInterval(howlongGone);
     if (secondNotif) secondNotif.close()
-  }
+  } 
 })
