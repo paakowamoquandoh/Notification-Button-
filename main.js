@@ -24,13 +24,17 @@ sendNotification.addEventListener("click", function(){
 })
 
 let secondNotif;
+let howlongGone;
 document.addEventListener("visibilitychange", function(){
   if (document.visibilityState === "hidden") {
-    secondNotif = new Notification("You left??", {
-      boby: "Hope you come back soon",
-      tag: "Get Back"
-    })
+    const leaveTime = new Date();
+    setInterval(() => {
+      secondNotif = new Notification("You left??", {
+        boby: `Hope you come back soon youve been gone for ${Math.round(new Date() - howlongGone) / 1000 } seconds`,
+        tag: "Get Back"
+      })
+    }, 300);
   } else {
-    // secondNotif.close()
+    secondNotif.close()
   }
 })
