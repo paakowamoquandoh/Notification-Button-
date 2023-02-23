@@ -28,13 +28,14 @@ let howlongGone;
 document.addEventListener("visibilitychange", function(){
   if (document.visibilityState === "hidden") {
     const leaveTime = new Date();
-    setInterval(() => {
+    howlongGone = setInterval(() => { 
       secondNotif = new Notification("You left??", {
-        boby: `Hope you come back soon youve been gone for ${Math.round(new Date() - howlongGone) / 1000 } seconds`,
+        boby: `Hope you come back soon youve been gone for ${Math.round(new Date() - leaveTime) / 1000 } seconds`,
         tag: "Get Back"
       })
-    }, 300);
+    }, 3000);
   } else {
-    secondNotif.close()
+    if(howlongGone) clearInterval(howlongGone);
+    if (secondNotif) secondNotif.close()
   }
 })
