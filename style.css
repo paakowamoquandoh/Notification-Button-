@@ -6,12 +6,13 @@ body{
 }
 
 .button{
-  padding: 14px 30px;
+  padding: 24px 38px;
   border: 1.5px rgb(4, 4, 58) solid;
   border-radius: 8px;
   font-weight: bold;
   color: orangered;
   background-color: rgb(4, 4, 58);
+  font-size: 2rem;
 }
 
 .button:hover{
