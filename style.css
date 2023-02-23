@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+}
+
+.button{
+  padding: 14px 30px;
+  border: 1.5px rgb(4, 4, 58) solid;
+  border-radius: 8px;
+  font-weight: bold;
+  color: orangered;
+  background-color: rgb(4, 4, 58);
+}
+
+.button:hover{
+  border: 1.5px rgb(206, 127, 138) solid;
+
+  color: rgb(4, 4, 58);
+  background-color: orangered;
+}
